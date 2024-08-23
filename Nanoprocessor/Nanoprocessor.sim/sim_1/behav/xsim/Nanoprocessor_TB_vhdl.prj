@@ -1,0 +1,27 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/Bit_3_Adder.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/src/D_FF.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/src/Decoder_3_to_8.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/src/FA.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/src/HA.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/src/LUT_16_7.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/Mux_2way_3bit.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/Mux_2way_4bit.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/P_Counter.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/src/Register.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/tri_state_buffer_3bit.vhd" \
+"../../../../Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd" \
+"../../../../Nanoprocessor.srcs/sim_1/new/Nanoprocessor_TB.vhd" \
+
+# Do not sort compile order
+nosort

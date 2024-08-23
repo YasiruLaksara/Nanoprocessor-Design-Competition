@@ -1,0 +1,1413 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 11 14:17:44 2023
+# Process ID: 16860
+# Current directory: D:/Vivado/Nanoprocessor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15684 D:\Vivado\Nanoprocessor\Nanoprocessor.xpr
+# Log file: D:/Vivado/Nanoprocessor/vivado.log
+# Journal file: D:/Vivado/Nanoprocessor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Vivado/Nanoprocessor/Nanoprocessor.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 987.133 ; gain = 226.770
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+[Sun Jun 11 14:20:22 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 8
+[Sun Jun 11 14:20:54 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1810.113 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1810.113 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:18 ; elapsed = 00:00:16 . Memory (MB): peak = 1932.570 ; gain = 912.336
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: NanoProcessor
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1942.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'NanoProcessor' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:47]
+INFO: [Synth 8-3491] module 'Slow_Clk' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:5' bound to instance 'Slow_Clk_0' of component 'Slow_Clk' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'Slow_Clk' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'Slow_Clk' (1#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:10]
+INFO: [Synth 8-3491] module 'Instruction_Decoder' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:34' bound to instance 'InstructionDecoder' of component 'Instruction_Decoder' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:194]
+INFO: [Synth 8-638] synthesizing module 'Instruction_Decoder' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:57]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:22' bound to instance 'OPCODE_Decoder' of component 'Decoder_2_to_4' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'Decoder_2_to_4' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_2_to_4' (2#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Instruction_Decoder' (3#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:57]
+INFO: [Synth 8-3491] module 'Mux_2way_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_4bit.vhd:34' bound to instance 'Multiplexer_2way_4bit' of component 'Mux_2way_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:208]
+INFO: [Synth 8-638] synthesizing module 'Mux_2way_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_4bit.vhd:41]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_0' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_4bit.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'tri_state_buffer_4bit' (4#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:41]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_1' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_4bit.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'Mux_2way_4bit' (5#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_4bit.vhd:41]
+INFO: [Synth 8-3491] module 'PROGRM_ROM' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd:35' bound to instance 'Program_Rom' of component 'Progrm_Rom' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'PROGRM_ROM' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'PROGRM_ROM' (6#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd:40]
+INFO: [Synth 8-3491] module 'Bit_3_Adder' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Bit_3_Adder.vhd:34' bound to instance 'Bit3Adder' of component 'Bit_3_Adder' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:224]
+INFO: [Synth 8-638] synthesizing module 'Bit_3_Adder' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Bit_3_Adder.vhd:39]
+INFO: [Synth 8-3491] module 'FA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Bit_3_Adder.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'FA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:42]
+INFO: [Synth 8-3491] module 'HA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/HA.vhd:34' bound to instance 'HA_0' of component 'HA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'HA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/HA.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'HA' (7#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/HA.vhd:41]
+INFO: [Synth 8-3491] module 'HA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/HA.vhd:34' bound to instance 'HA_1' of component 'HA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'FA' (8#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:42]
+INFO: [Synth 8-3491] module 'FA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Bit_3_Adder.vhd:63]
+INFO: [Synth 8-3491] module 'FA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Bit_3_Adder.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'Bit_3_Adder' (9#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Bit_3_Adder.vhd:39]
+INFO: [Synth 8-3491] module 'Mux_2way_3bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_3bit.vhd:34' bound to instance 'Multiplexer_2way_3bit' of component 'Mux_2way_3bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:231]
+INFO: [Synth 8-638] synthesizing module 'Mux_2way_3bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_3bit.vhd:41]
+INFO: [Synth 8-3491] module 'tri_state_buffer_3bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_3bit.vhd:34' bound to instance 'tri_state_buffer_0' of component 'tri_state_buffer_3bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_3bit.vhd:50]
+INFO: [Synth 8-638] synthesizing module 'tri_state_buffer_3bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_3bit.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'tri_state_buffer_3bit' (10#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_3bit.vhd:41]
+INFO: [Synth 8-3491] module 'tri_state_buffer_3bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_3bit.vhd:34' bound to instance 'tri_state_buffer_1' of component 'tri_state_buffer_3bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_3bit.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'Mux_2way_3bit' (11#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_3bit.vhd:41]
+INFO: [Synth 8-3491] module 'P_Counter' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/P_Counter.vhd:37' bound to instance 'Progaram_Counter' of component 'P_Counter' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:239]
+INFO: [Synth 8-638] synthesizing module 'P_Counter' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/P_Counter.vhd:44]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/D_FF.vhd:4' bound to instance 'D_FF0' of component 'D_FF' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/P_Counter.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'D_FF' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/D_FF.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'D_FF' (12#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/D_FF.vhd:13]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/D_FF.vhd:4' bound to instance 'D_FF1' of component 'D_FF' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/P_Counter.vhd:65]
+INFO: [Synth 8-3491] module 'D_FF' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/D_FF.vhd:4' bound to instance 'D_FF2' of component 'D_FF' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/P_Counter.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'P_Counter' (13#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/P_Counter.vhd:44]
+INFO: [Synth 8-3491] module 'Register_Bank' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:34' bound to instance 'RegisterBank' of component 'Register_Bank' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:247]
+INFO: [Synth 8-638] synthesizing module 'Register_Bank' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:49]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Decoder_3_to_8.vhd:3' bound to instance 'Decoder' of component 'Decoder_3_to_8' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'Decoder_3_to_8' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Decoder_3_to_8.vhd:8]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:22' bound to instance 'Decoder_2_to_4_0' of component 'Decoder_2_to_4' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Decoder_3_to_8.vhd:17]
+INFO: [Synth 8-3491] module 'Decoder_2_to_4' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd:22' bound to instance 'Decoder_2_to_4_1' of component 'Decoder_2_to_4' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Decoder_3_to_8.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Decoder_3_to_8' (14#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Decoder_3_to_8.vhd:8]
+INFO: [Synth 8-3491] module 'Reg' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:13' bound to instance 'Reg_0' of component 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'Reg' (15#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:21]
+INFO: [Synth 8-3491] module 'Reg' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:13' bound to instance 'Reg_1' of component 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:88]
+INFO: [Synth 8-3491] module 'Reg' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:13' bound to instance 'Reg_2' of component 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:97]
+INFO: [Synth 8-3491] module 'Reg' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:13' bound to instance 'Reg_3' of component 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:106]
+INFO: [Synth 8-3491] module 'Reg' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:13' bound to instance 'Reg_4' of component 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:115]
+INFO: [Synth 8-3491] module 'Reg' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:13' bound to instance 'Reg_5' of component 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:124]
+INFO: [Synth 8-3491] module 'Reg' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:13' bound to instance 'Reg_6' of component 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:133]
+INFO: [Synth 8-3491] module 'Reg' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd:13' bound to instance 'Reg_7' of component 'Reg' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:142]
+INFO: [Synth 8-256] done synthesizing module 'Register_Bank' (16#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:49]
+INFO: [Synth 8-3491] module 'Add_Sub_Unit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd:34' bound to instance 'AddSubUnit' of component 'Add_Sub_Unit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'Add_Sub_Unit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd:43]
+INFO: [Synth 8-3491] module 'RCA_4' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:5' bound to instance 'RCA_Unit' of component 'RCA_4' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'RCA_4' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:16]
+INFO: [Synth 8-3491] module 'FA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:34' bound to instance 'FA_0' of component 'FA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:33]
+INFO: [Synth 8-3491] module 'FA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:34' bound to instance 'FA_1' of component 'FA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:41]
+INFO: [Synth 8-3491] module 'FA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:34' bound to instance 'FA_2' of component 'FA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:49]
+INFO: [Synth 8-3491] module 'FA' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:34' bound to instance 'FA_3' of component 'FA' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'RCA_4' (17#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Add_Sub_Unit' (18#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd:43]
+INFO: [Synth 8-3491] module 'Mux_8way_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:34' bound to instance 'Multiplexer_8way_4bit_A' of component 'Mux_8way_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:273]
+INFO: [Synth 8-638] synthesizing module 'Mux_8way_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:47]
+INFO: [Synth 8-3491] module 'Decoder_3_to_8' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Decoder_3_to_8.vhd:3' bound to instance 'Decoder_3_to_8_0' of component 'Decoder_3_to_8' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:63]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_0' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:67]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_1' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:71]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_2' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:75]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_3' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:79]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_4' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:83]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_5' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:87]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_6' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:91]
+INFO: [Synth 8-3491] module 'tri_state_buffer_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd:34' bound to instance 'tri_state_buffer_7' of component 'tri_state_buffer_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'Mux_8way_4bit' (19#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:47]
+INFO: [Synth 8-3491] module 'Mux_8way_4bit' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:34' bound to instance 'Multiplexer_8way_4bit_B' of component 'Mux_8way_4bit' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:287]
+INFO: [Synth 8-3491] module 'LUT_16_7' declared at 'D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/LUT_16_7.vhd:5' bound to instance 'LUT_7seg' of component 'LUT_16_7' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:304]
+INFO: [Synth 8-638] synthesizing module 'LUT_16_7' [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/LUT_16_7.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'LUT_16_7' (20#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/LUT_16_7.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'NanoProcessor' (21#1) [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:47]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1942.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1942.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1942.660 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 4 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/constrs_1/new/Basys3Labs.xdc]
+Finished Parsing XDC File [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/constrs_1/new/Basys3Labs.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1996.598 ; gain = 53.938
+96 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 15:05:21 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2005.844 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2005.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 15:08:05 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 15:08:05 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+INFO: [Common 17-14] Message 'filemgmt 56-199' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 15:33:03 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 15:33:03 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 15:33:48 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 15:33:49 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 15:36:12 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 15:37:40 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 15:37:40 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 15:40:54 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 15:40:54 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property top Program_Rom_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Program_Rom_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Program_Rom_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PROGRM_ROM
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Program_Rom_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Program_Rom_TB
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Program_Rom_TB_behav xil_defaultlib.Program_Rom_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.PROGRM_ROM [progrm_rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.program_rom_tb
+Built simulation snapshot Program_Rom_TB_behav
+
+****** Webtalk v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim/xsim.dir/Program_Rom_TB_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Jun 11 15:45:43 2023...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Program_Rom_TB_behav -key {Behavioral:sim_1:Functional:Program_Rom_TB} -tclbatch {Program_Rom_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Program_Rom_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Program_Rom_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2758.438 ; gain = 14.824
+set_property top Nanoprocessor_TB [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Instruction_Decoder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Slow_Clk
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Slow_Clk [slow_clk_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tri_state_buffer_4bit [tri_state_buffer_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2way_4bit [mux_2way_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.PROGRM_ROM [progrm_rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
+Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
+Compiling architecture behavioral of entity xil_defaultlib.Bit_3_Adder [bit_3_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tri_state_buffer_3bit [tri_state_buffer_3bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2way_3bit [mux_2way_3bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.D_FF [d_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.P_Counter [p_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
+Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
+Compiling architecture behavioral of entity xil_defaultlib.Register_Bank [register_bank_default]
+Compiling architecture behavioral of entity xil_defaultlib.RCA_4 [rca_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add_Sub_Unit [add_sub_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_8way_4bit [mux_8way_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.LUT_16_7 [lut_16_7_default]
+Compiling architecture behavioral of entity xil_defaultlib.NanoProcessor [nanoprocessor_default]
+Compiling architecture behavioral of entity xil_defaultlib.nanoprocessor_tb
+Built simulation snapshot Nanoprocessor_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+update_compile_order -fileset sim_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 15:48:24 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 15:48:25 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PROGRM_ROM
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Slow_Clk
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Slow_Clk [slow_clk_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tri_state_buffer_4bit [tri_state_buffer_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2way_4bit [mux_2way_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.PROGRM_ROM [progrm_rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
+Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
+Compiling architecture behavioral of entity xil_defaultlib.Bit_3_Adder [bit_3_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tri_state_buffer_3bit [tri_state_buffer_3bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2way_3bit [mux_2way_3bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.D_FF [d_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.P_Counter [p_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
+Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
+Compiling architecture behavioral of entity xil_defaultlib.Register_Bank [register_bank_default]
+Compiling architecture behavioral of entity xil_defaultlib.RCA_4 [rca_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add_Sub_Unit [add_sub_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_8way_4bit [mux_8way_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.LUT_16_7 [lut_16_7_default]
+Compiling architecture behavioral of entity xil_defaultlib.NanoProcessor [nanoprocessor_default]
+Compiling architecture behavioral of entity xil_defaultlib.nanoprocessor_tb
+Built simulation snapshot Nanoprocessor_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg
+set_property xsim.view D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -view {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -view {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -view {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -view {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+save_wave_config {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -view {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Nanoprocessor_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Program_Rom_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Add_Sub_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Nanoprocessor_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Program_Rom_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Add_Sub_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Nanoprocessor_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Program_Rom_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Add_Sub_TB.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd:]
+save_wave_config {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity NanoProcessor
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Slow_Clk [slow_clk_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tri_state_buffer_4bit [tri_state_buffer_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2way_4bit [mux_2way_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.PROGRM_ROM [progrm_rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
+Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
+Compiling architecture behavioral of entity xil_defaultlib.Bit_3_Adder [bit_3_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tri_state_buffer_3bit [tri_state_buffer_3bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2way_3bit [mux_2way_3bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.D_FF [d_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.P_Counter [p_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
+Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
+Compiling architecture behavioral of entity xil_defaultlib.Register_Bank [register_bank_default]
+Compiling architecture behavioral of entity xil_defaultlib.RCA_4 [rca_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add_Sub_Unit [add_sub_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_8way_4bit [mux_8way_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.LUT_16_7 [lut_16_7_default]
+Compiling architecture behavioral of entity xil_defaultlib.NanoProcessor [nanoprocessor_default]
+Compiling architecture behavioral of entity xil_defaultlib.nanoprocessor_tb
+Built simulation snapshot Nanoprocessor_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -view {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Nanoprocessor_TB' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj Nanoprocessor_TB_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Slow_Clk
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 80211ed62e364a13a56e9409f75970c2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Nanoprocessor_TB_behav xil_defaultlib.Nanoprocessor_TB -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.Slow_Clk [slow_clk_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_2_to_4 [decoder_2_to_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Instruction_Decoder [instruction_decoder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tri_state_buffer_4bit [tri_state_buffer_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2way_4bit [mux_2way_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.PROGRM_ROM [progrm_rom_default]
+Compiling architecture behavioral of entity xil_defaultlib.HA [ha_default]
+Compiling architecture behavioral of entity xil_defaultlib.FA [fa_default]
+Compiling architecture behavioral of entity xil_defaultlib.Bit_3_Adder [bit_3_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.tri_state_buffer_3bit [tri_state_buffer_3bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_2way_3bit [mux_2way_3bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.D_FF [d_ff_default]
+Compiling architecture behavioral of entity xil_defaultlib.P_Counter [p_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.Decoder_3_to_8 [decoder_3_to_8_default]
+Compiling architecture behavioral of entity xil_defaultlib.Reg [reg_default]
+Compiling architecture behavioral of entity xil_defaultlib.Register_Bank [register_bank_default]
+Compiling architecture behavioral of entity xil_defaultlib.RCA_4 [rca_4_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add_Sub_Unit [add_sub_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.Mux_8way_4bit [mux_8way_4bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.LUT_16_7 [lut_16_7_default]
+Compiling architecture behavioral of entity xil_defaultlib.NanoProcessor [nanoprocessor_default]
+Compiling architecture behavioral of entity xil_defaultlib.nanoprocessor_tb
+Built simulation snapshot Nanoprocessor_TB_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Vivado/Nanoprocessor/Nanoprocessor.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Nanoprocessor_TB_behav -key {Behavioral:sim_1:Functional:Nanoprocessor_TB} -tclbatch {Nanoprocessor_TB.tcl} -view {D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config D:/Vivado/Nanoprocessor/Nanoprocessor_TB_behav.wcfg
+source Nanoprocessor_TB.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Nanoprocessor_TB_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:09:32 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 16:09:32 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:11:35 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 16:11:35 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:17:10 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 16:17:11 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:26:05 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 16:26:05 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:31:44 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 16:31:44 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:36:07 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 16:36:07 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:38:34 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:41:38 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 16:41:38 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Jun 11 16:44:46 2023] Launched synth_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/synth_1/runme.log
+[Sun Jun 11 16:44:47 2023] Launched impl_1...
+Run output will be captured here: D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/Vivado/Nanoprocessor/Nanoprocessor.runs/impl_1/NanoProcessor.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183A8A8CEA
+close_hw
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 11 17:19:45 2023...

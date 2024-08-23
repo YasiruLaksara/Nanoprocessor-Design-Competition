@@ -1,0 +1,27 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Nanoprocessor_TB.vhd,1686395043,vhdl,,,,nanoprocessor_tb,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sim_1/new/Program_Rom_TB.vhd,1686394581,vhdl,,,,program_rom_tb,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/new/Decoder_2_to_4.vhd,1686054241,vhdl,,,,decoder_2_to_4,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/D_FF.vhd,1686051162,vhdl,,,,d_ff,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Decoder_3_to_8.vhd,1686051175,vhdl,,,,decoder_3_to_8,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/FA.vhd,1686051182,vhdl,,,,fa,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/HA.vhd,1686051194,vhdl,,,,ha,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/LUT_16_7.vhd,1686210102,vhdl,,,,lut_16_7,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/RCA_4.vhd,1686051700,vhdl,,,,rca_4,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Register.vhd,1686052809,vhdl,,,,reg,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/imports/src/Slow_Clk.vhd,1686484305,vhdl,,,,slow_clk,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Add_Sub_Unit.vhd,1686392198,vhdl,,,,add_sub_unit,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Bit_3_Adder.vhd,1686393462,vhdl,,,,bit_3_adder,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Instruction_Decoder.vhd,1686484171,vhdl,,,,instruction_decoder,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_3bit.vhd,1686392870,vhdl,,,,mux_2way_3bit,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_2way_4bit.vhd,1686393071,vhdl,,,,mux_2way_4bit,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Mux_8way_4bit.vhd,1686392376,vhdl,,,,mux_8way_4bit,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/NanoProcessor.vhd,1686484171,vhdl,,,,nanoprocessor,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/PROGRM_ROM.vhd,1686482078,vhdl,,,,progrm_rom,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/P_Counter.vhd,1686391965,vhdl,,,,p_counter,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/Register_Bank.vhd,1686392091,vhdl,,,,register_bank,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_3bit.vhd,1686392689,vhdl,,,,tri_state_buffer_3bit,,,,,,,,
+D:/Vivado/Nanoprocessor/Nanoprocessor.srcs/sources_1/new/tri_state_buffer_4bit.vhd,1686392320,vhdl,,,,tri_state_buffer_4bit,,,,,,,,
