@@ -1,0 +1,6 @@
+# Track all ZIP and TAR.GZ files with Git LFS
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.tar.gz filter=lfs diff=lfs merge=lfs -text
+
+# Track a specific large file
+path/to/large/file.ext filter=lfs diff=lfs merge=lfs -text
